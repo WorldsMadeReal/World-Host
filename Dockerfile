@@ -14,7 +14,8 @@ RUN pnpm install --frozen-lockfile
 # Copy the rest of the source and build
 COPY . .
 # Use TypeScript project references to build in the right order
-RUN pnpm exec tsc -b
+# Build packages explicitly in order to ensure type declarations exist
+RUN pnpm --filter @worldhost/shared build && pnpm --filter @worldhost/server build
 
 # Runtime env
 ENV NODE_ENV=production
