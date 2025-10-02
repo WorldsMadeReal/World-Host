@@ -3,7 +3,7 @@
 // This re-exports types directly from the shared source for TypeScript only.
 
 declare module '@worldhost/shared' {
-  export * from '../../../shared/src/index';
+  export * from '../../../shared/dist/index';
 }
 
 

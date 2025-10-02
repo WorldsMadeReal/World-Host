@@ -6,7 +6,7 @@
     "baseUrl": ".",
     "paths": {
       "@worldhost/shared": [
-        "packages/shared/src/index.ts"
+        "packages/shared/dist/index.d.ts"
       ]
     },
     "allowSyntheticDefaultImports": true,
