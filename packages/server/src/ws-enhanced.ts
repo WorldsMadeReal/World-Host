@@ -526,7 +526,7 @@ function handleLoginMessage(
     client.playerId = context.worldState.addPlayer(layerId, message.playerName || `Player-${client.clientId.slice(-4)}`);
     console.log(`✅ Login: ${client.clientId} -> ${client.playerId} on ${layerId}`);
   }
-  sendMessage(ws, { type: 'login_ok', playerId: client.playerId!, layerId } as any);
+  sendMessage(ws, { type: 'login_ok', playerId: client.playerId || '' , layerId } as any);
 }
 
 function handleLogoutMessage(
