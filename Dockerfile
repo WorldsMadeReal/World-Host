@@ -13,7 +13,8 @@ RUN pnpm install --frozen-lockfile
 
 # Copy the rest of the source and build
 COPY . .
-RUN pnpm -r build
+# Use TypeScript project references to build in the right order
+RUN pnpm exec tsc -b
 
 # Runtime env
 ENV NODE_ENV=production
