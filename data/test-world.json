@@ -1,0 +1,469 @@
+{
+  "version": "1.0.0",
+  "timestamp": 1758963926102,
+  "layers": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Blank layer",
+      "chunkSize": 32,
+      "gravity": -9.81,
+      "spawnPoint": {
+        "x": 0,
+        "y": 2,
+        "z": 0
+      },
+      "properties": {}
+    },
+    {
+      "name": "Test Layer",
+      "description": "A test layer for API testing",
+      "chunkSize": 64,
+      "gravity": -9.81,
+      "spawnPoint": {
+        "x": 10,
+        "y": 5,
+        "z": 10
+      },
+      "properties": {
+        "theme": "forest",
+        "difficulty": "easy"
+      },
+      "id": "layer-1758963926082-kqa6k69p4"
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "player",
+      "name": "Player",
+      "description": "A player character",
+      "contracts": [],
+      "tags": [
+        "player",
+        "character"
+      ],
+      "created": 1758963893835
+    },
+    {
+      "id": "block",
+      "name": "Block",
+      "description": "A solid block",
+      "contracts": [
+        {
+          "type": "identity",
+          "id": "",
+          "name": "Block",
+          "description": "A solid block"
+        },
+        {
+          "type": "mobility",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "shape",
+          "bounds": {
+            "min": {
+              "x": -0.5,
+              "y": -0.5,
+              "z": -0.5
+            },
+            "max": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            }
+          },
+          "geometry": "box"
+        },
+        {
+          "type": "visual",
+          "color": "#8B4513",
+          "visible": true
+        },
+        {
+          "type": "solidity",
+          "solid": true
+        },
+        {
+          "type": "durability",
+          "health": 50,
+          "maxHealth": 50
+        }
+      ],
+      "tags": [
+        "block",
+        "solid",
+        "destructible"
+      ],
+      "created": 1758963893835
+    },
+    {
+      "id": "item",
+      "name": "Item",
+      "description": "A collectible item",
+      "contracts": [
+        {
+          "type": "identity",
+          "id": "",
+          "name": "Item",
+          "description": "A collectible item"
+        },
+        {
+          "type": "mobility",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "shape",
+          "bounds": {
+            "min": {
+              "x": -0.15,
+              "y": -0.15,
+              "z": -0.15
+            },
+            "max": {
+              "x": 0.15,
+              "y": 0.15,
+              "z": 0.15
+            }
+          },
+          "geometry": "box"
+        },
+        {
+          "type": "visual",
+          "color": "#FFD700",
+          "visible": true
+        },
+        {
+          "type": "portable",
+          "canPickup": true,
+          "weight": 1
+        }
+      ],
+      "tags": [
+        "item",
+        "portable"
+      ],
+      "created": 1758963893835
+    },
+    {
+      "id": "archetype-1758963926087",
+      "name": "Magic Crystal",
+      "description": "A glowing magical crystal",
+      "contracts": [
+        {
+          "type": "identity",
+          "id": "",
+          "name": "Magic Crystal",
+          "description": "A mysterious glowing crystal"
+        },
+        {
+          "type": "mobility",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "type": "shape",
+          "bounds": {
+            "min": {
+              "x": -0.25,
+              "y": -0.25,
+              "z": -0.25
+            },
+            "max": {
+              "x": 0.25,
+              "y": 0.25,
+              "z": 0.25
+            }
+          },
+          "geometry": "sphere"
+        },
+        {
+          "type": "visual",
+          "visible": true,
+          "color": "#00FFFF"
+        },
+        {
+          "type": "portable",
+          "canPickup": true,
+          "weight": 0.5
+        }
+      ],
+      "tags": [
+        "magic",
+        "collectible",
+        "rare"
+      ],
+      "created": 1758963926087
+    }
+  ],
+  "entities": [
+    {
+      "id": "block-1758963893847-4z3503qty",
+      "layerId": "default",
+      "contracts": [
+        {
+          "type": "identity",
+          "id": "block-1758963893847-4z3503qty",
+          "name": "Block",
+          "description": "A solid block"
+        },
+        {
+          "type": "shape",
+          "bounds": {
+            "min": {
+              "x": -0.5,
+              "y": -0.5,
+              "z": -0.5
+            },
+            "max": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            }
+          },
+          "geometry": "box"
+        },
+        {
+          "type": "visual",
+          "visible": true,
+          "color": "#8B4513"
+        },
+        {
+          "type": "solidity",
+          "solid": true
+        },
+        {
+          "type": "durability",
+          "health": 50,
+          "maxHealth": 50
+        },
+        {
+          "type": "mobility",
+          "position": {
+            "x": 0,
+            "y": -1567.5650144499946,
+            "z": 0
+          },
+          "velocity": {
+            "x": 0,
+            "y": -53,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "item-1758963893855-stfo9b4ue",
+      "layerId": "default",
+      "contracts": [
+        {
+          "type": "identity",
+          "id": "item-1758963893855-stfo9b4ue",
+          "name": "Item",
+          "description": "A collectible item"
+        },
+        {
+          "type": "shape",
+          "bounds": {
+            "min": {
+              "x": -0.15,
+              "y": -0.15,
+              "z": -0.15
+            },
+            "max": {
+              "x": 0.15,
+              "y": 0.15,
+              "z": 0.15
+            }
+          },
+          "geometry": "box"
+        },
+        {
+          "type": "visual",
+          "visible": true,
+          "color": "#FFD700"
+        },
+        {
+          "type": "portable",
+          "canPickup": true,
+          "weight": 1
+        },
+        {
+          "type": "durability",
+          "health": 1,
+          "maxHealth": 1
+        },
+        {
+          "type": "mobility",
+          "position": {
+            "x": 2,
+            "y": -1566.5650144499946,
+            "z": 0
+          },
+          "velocity": {
+            "x": 0,
+            "y": -53,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "world-default",
+      "layerId": "default",
+      "contracts": [
+        {
+          "type": "identity",
+          "id": "world-default",
+          "name": "World",
+          "description": "World container"
+        },
+        {
+          "type": "world_conditions",
+          "weather": "clear",
+          "timeOfDay": "day",
+          "properties": {}
+        },
+        {
+          "type": "world_commands",
+          "commands": [
+            "login",
+            "logout",
+            "set_view",
+            "move_dir"
+          ]
+        },
+        {
+          "type": "durability",
+          "health": 1,
+          "maxHealth": 1
+        }
+      ]
+    },
+    {
+      "id": "block-1758963926090-htkk88h84",
+      "layerId": "default",
+      "contracts": [
+        {
+          "type": "identity",
+          "id": "block-1758963926090-htkk88h84",
+          "name": "Block",
+          "description": "A solid block"
+        },
+        {
+          "type": "shape",
+          "bounds": {
+            "min": {
+              "x": -0.5,
+              "y": -0.5,
+              "z": -0.5
+            },
+            "max": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            }
+          },
+          "geometry": "box"
+        },
+        {
+          "type": "visual",
+          "visible": true,
+          "color": "#8B4513"
+        },
+        {
+          "type": "solidity",
+          "solid": true
+        },
+        {
+          "type": "durability",
+          "health": 50,
+          "maxHealth": 50
+        },
+        {
+          "type": "mobility",
+          "position": {
+            "x": 5,
+            "y": -0.0028350900000000006,
+            "z": 5
+          },
+          "velocity": {
+            "x": 0,
+            "y": -0.16677000000000003,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "archetype-1758963926087-1758963926094-y67ngl1z9",
+      "layerId": "default",
+      "contracts": [
+        {
+          "type": "identity",
+          "id": "archetype-1758963926087-1758963926094-y67ngl1z9",
+          "name": "Magic Crystal",
+          "description": "A mysterious glowing crystal"
+        },
+        {
+          "type": "shape",
+          "bounds": {
+            "min": {
+              "x": -0.25,
+              "y": -0.25,
+              "z": -0.25
+            },
+            "max": {
+              "x": 0.25,
+              "y": 0.25,
+              "z": 0.25
+            }
+          },
+          "geometry": "sphere"
+        },
+        {
+          "type": "visual",
+          "visible": true,
+          "color": "#FF00FF"
+        },
+        {
+          "type": "portable",
+          "canPickup": true,
+          "weight": 0.5
+        },
+        {
+          "type": "mobility",
+          "position": {
+            "x": 0,
+            "y": 1.99716491,
+            "z": 0
+          },
+          "velocity": {
+            "x": 0,
+            "y": -0.16677000000000003,
+            "z": 0
+          }
+        },
+        {
+          "type": "durability",
+          "health": 1,
+          "maxHealth": 1
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "playerCounter": 0
+  }
+}
